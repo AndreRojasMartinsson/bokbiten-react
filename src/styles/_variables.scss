@@ -1,0 +1,23 @@
+@forward "colors/dark";
+@forward "colors/light";
+
+@import "colors/dark";
+@import "colors/light";
+
+$font-body: "Rubik", "Helvetica", "Arial", sans-serif;
+$font-header: "Krona One", "Helvetica", "Arial", sans-serif;
+$font-brand: "Jockey One", "Helvetica", "Arial", sans-serif;
+
+$bg: var(--bg);
+$bg-header: var(--bg-header);
+$bg-hero: var(--bg-hero);
+
+$fg: var(--fg);
+$fg-button: var(--fg-button);
+$button-fg: var(--button-fg);
+
+$primary: var(--primary);
+$gold: var(--gold);
+$border: var(--border);
+$primary-button: var(--primary-button);
+$button-primary: var(--button-primary);

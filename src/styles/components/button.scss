@@ -1,0 +1,73 @@
+@use "../mixins";
+
+@function css-darken($color) {
+	// @return hsla(var(--#{$color}), 20%);
+
+	@return #{darken($color, 30%)};
+}
+
+@function toValues($colour) {
+	@return red($colour) + ", " + green($colour) + ", " + blue($colour);
+}
+
+@function toRGB($colour) {
+	@return rgb(red($colour), green($colour), blue($colour));
+}
+
+@function toRGBA($colour, $alpha: 1) {
+	@return rgba(toRGB($colour), $alpha);
+}
+
+.button {
+	outline: none;
+	border: none;
+	transition: all 200ms ease-in-out;
+
+	font-size: 12px;
+	padding: 1.2rem 2.8rem;
+	margin: 15px;
+	border-radius: 8px;
+}
+
+.button--primary {
+	background: var(--primary-button);
+	color: var(--fg-button);
+
+	&:hover {
+		filter: brightness(1.03);
+	}
+
+	&:active {
+		filter: brightness(1.05);
+	}
+
+	&:focus {
+		box-shadow:
+			white 0px 0px 0px 2px,
+			#d4942648 0px 0px 0px 4px;
+	}
+}
+
+.button--square {
+	aspect-ratio: 1;
+	padding: 0.8rem;
+	display: grid;
+	place-content: center;
+}
+
+.button--small {
+	padding: 1rem 2rem;
+	font-size: 10px;
+}
+
+.button--large {
+	font-size: 14px;
+	padding: 1.25rem 3rem;
+}
+
+.button--square.button--small {
+	padding: 0.5rem;
+}
+.button--square.button--large {
+	padding: 1.2rem;
+}

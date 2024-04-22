@@ -1,0 +1,21 @@
+@mixin respondTo($media, $type: "max") {
+	@media (#{$type}-width: $media) {
+		@content;
+	}
+}
+
+@mixin center($mode: "v") {
+	position: absolute;
+
+	@if $mode == "h" {
+		left: 50%;
+		transform: translateX(-50%);
+	} @else if $mode == "v" {
+		top: 50%;
+		transform: translateY(-50%);
+	} @else {
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+}

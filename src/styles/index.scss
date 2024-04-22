@@ -1,0 +1,46 @@
+@import "reset";
+@import "variables";
+
+:root {
+	--bg: #{$bg_light};
+	--bg-header: #{$bg-header_light};
+	--bg-hero: #{$bg-hero_light};
+
+	--border: #{$border_light};
+
+	--fg: #{$fg_light};
+	--primary: #{$primary_light};
+
+	--gold: #{$gold_light};
+
+	--primary-button: #{$primary-button_light};
+	--fg-button: #{$fg-button_light};
+
+	--button-primary: #{$button-primary_light};
+	--button-fg: #{$button-fg_light};
+}
+
+.dark {
+	--bg: #{$bg_dark};
+	--bg-header: #{$bg-header_dark};
+	--bg-hero: #{$bg-hero_dark};
+
+	--border: #{$border_dark};
+
+	--fg: #{$fg_dark};
+	--primary: #{$primary_dark};
+
+	--gold: #{$gold_dark};
+
+	--primary-button: #{$primary-button_dark};
+	--fg-button: #{$fg-button_dark};
+
+	--button-primary: #{$button-primary_dark};
+	--button-fg: #{$button-fg_dark};
+}
+
+html {
+	background: var(--bg);
+}
+
+@import "components/button";

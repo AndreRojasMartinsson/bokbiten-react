@@ -1,0 +1,194 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 12px;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+code,
+em,
+img,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+canvas,
+embed,
+footer,
+header,
+nav,
+section,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 12px;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+:root {
+  --bg: #f9f8f2;
+  --bg-header: #f6f4eb;
+  --bg-hero: #f7e4bf;
+  --border: #e3e0d3;
+  --fg: #252525;
+  --primary: #d28d26;
+  --gold: #c0980c;
+  --primary-button: #e3e0d3;
+  --fg-button: #888371;
+  --button-primary: #e3e0d3;
+  --button-fg: #888371;
+}
+
+.dark {
+  --bg: #252525;
+  --bg-header: #f6f4eb;
+  --bg-hero: #f7e4bf;
+  --border: #e3e0d3;
+  --fg: #f9f8f2;
+  --primary: #d28d26;
+  --gold: #c0980c;
+  --primary-button: #e3e0d3;
+  --fg-button: #888371;
+  --button-primary: #e3e0d3;
+  --button-fg: #888371;
+}
+
+html {
+  background: var(--bg);
+}
+
+.button {
+  outline: none;
+  border: none;
+  transition: all 200ms ease-in-out;
+  font-size: 12px;
+  padding: 1.2rem 2.8rem;
+  margin: 15px;
+  border-radius: 8px;
+}
+
+.button--primary {
+  background: var(--primary-button);
+  color: var(--fg-button);
+}
+.button--primary:hover {
+  filter: brightness(1.03);
+}
+.button--primary:active {
+  filter: brightness(1.05);
+}
+.button--primary:focus {
+  box-shadow: white 0px 0px 0px 2px, #d4942648 0px 0px 0px 4px;
+}
+
+.button--square {
+  aspect-ratio: 1;
+  padding: 0.8rem;
+  display: grid;
+  place-content: center;
+}
+
+.button--small {
+  padding: 1rem 2rem;
+  font-size: 10px;
+}
+
+.button--large {
+  font-size: 14px;
+  padding: 1.25rem 3rem;
+}
+
+.button--square.button--small {
+  padding: 0.5rem;
+}
+
+.button--square.button--large {
+  padding: 1.2rem;
+}
+
+/*# sourceMappingURL=index.css.map */
