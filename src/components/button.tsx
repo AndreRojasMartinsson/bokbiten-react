@@ -1,33 +1,5 @@
-import { cva, VariantProps } from "cva";
-import { ButtonHTMLAttributes } from "react";
-import cn from "classnames";
-
-export const buttonVariants = cva("button", {
-	variants: {
-		intent: {
-			primary: "button--primary",
-			secondary: "button--secondary",
-		},
-		size: {
-			small: "button--small",
-			regular: "",
-			large: "button--large",
-		},
-		shape: {
-			square: "button--square",
-			regular: "",
-		},
-	},
-	defaultVariants: {
-		intent: "primary",
-		shape: "regular",
-		size: "regular",
-	},
-});
-
-export interface ButtonProps
-	extends ButtonHTMLAttributes<HTMLButtonElement>,
-		VariantProps<typeof buttonVariants> {}
+import { ButtonProps, buttonVariants } from '@components/variants/button';
+import cn from 'classnames';
 
 export default function Button({
 	intent,
