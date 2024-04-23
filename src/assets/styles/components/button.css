@@ -19,7 +19,7 @@
   filter: brightness(0.95);
 }
 .button--primary:focus {
-  box-shadow: var(--bg) 0px 0px 0px 2px, rgba(212, 148, 38, 0.2823529412) 0px 0px 0px 4px;
+  box-shadow: var(--bg) 0px 0px 0px 2px, #d4942648 0px 0px 0px 4px;
 }
 
 .button--square {
