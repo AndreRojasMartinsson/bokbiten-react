@@ -1,0 +1,27 @@
+@import "../variables";
+
+.divider {
+	background: $border;
+}
+
+.divider.divider--horizontal {
+	width: 100%;
+	height: 1px;
+}
+
+.divider.divider--vertical {
+	width: 1px;
+	height: 100%;
+}
+
+.divider.divider--start {
+	place-self: start;
+}
+
+.divider.divider--center {
+	place-self: center;
+}
+
+.divider.divider--end {
+	place-self: end;
+}

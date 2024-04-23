@@ -7,7 +7,7 @@ interface NavItemProps
 	text?: ReactNode;
 }
 
-export default function NavItem({
+export default function NavigationItem({
 	text,
 	currentPage = false,
 	className,
