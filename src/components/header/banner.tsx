@@ -1,11 +1,11 @@
-import { Menu } from 'lucide-react';
-import { ThemeSwitcher } from '@components/theme';
 import Button from '@components/button';
-import Dropdown from './dropdown';
-import SocialsList from './socials-list';
+import Dropdown from '@components/header/dropdown';
+import SocialsList from '@components/header/socials-list';
+import { ThemeSwitcher } from '@components/theme';
+import { Menu } from 'lucide-react';
 import { useState } from 'react';
 
-export default function HeaderBanner() {
+export default function Banner() {
 	const [show, setShow] = useState<boolean>(false);
 
 	return (
