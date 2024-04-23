@@ -1,26 +1,27 @@
-import { cva, VariantProps } from 'cva';
-import { ButtonHTMLAttributes } from 'react';
+import { cva, VariantProps } from "cva";
+import { ButtonHTMLAttributes } from "react";
 
-export const buttonVariants = cva('button', {
+export const buttonVariants = cva("button", {
 	variants: {
 		intent: {
-			primary: 'button--primary',
-			secondary: 'button--secondary',
+			primary: "button--primary",
+			secondary: "button--secondary",
+			border: "button--border",
 		},
 		size: {
-			small: 'button--small',
-			regular: '',
-			large: 'button--large',
+			small: "button--small",
+			regular: "",
+			large: "button--large",
 		},
 		shape: {
-			square: 'button--square',
-			regular: '',
+			square: "button--square",
+			regular: "",
 		},
 	},
 	defaultVariants: {
-		intent: 'primary',
-		shape: 'regular',
-		size: 'regular',
+		intent: "primary",
+		shape: "regular",
+		size: "regular",
 	},
 });
 

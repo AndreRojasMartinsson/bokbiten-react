@@ -1,19 +1,31 @@
-import { ThemeSwitcher } from '@components/theme';
-import SocialsList from './socials-list';
-import cn from 'classnames';
-import NavigationList from '@components/navigation-list';
+import { ThemeSwitcher } from "@components/theme";
+import cn from "classnames";
+import NavigationItem from "@components/navigation/navigation-item";
+import { NavLinks } from "@config/nav-links";
+import Socials from "@components/socials";
+import Divider from "@components/divider";
 
 export default function Dropdown({ show = false }: { show?: boolean }) {
 	return (
-		<div className={cn('header__dropdown', show && 'header__dropdown--show')}>
-			<ol className='top__list'>
-				<SocialsList />
-				<div className='divider'></div>
+		<div className={cn("header__dropdown", show && "header__dropdown--show")}>
+			<ol className="top__list">
+				<Socials />
+				<Divider layout="vertical" placement="center" />
 				<ThemeSwitcher />
 			</ol>
-			<div className='dropdown__content'>
-				<NavigationList className='nav__bar' />
-				<p className='banner__text'>DELTA I BOKBITSCUPEN FÖR ATT VINNA PENGAR NU!</p>
+			<div className="dropdown__content">
+				<ol className="nav__bar">
+					{NavLinks.map((navLink) => (
+						<NavigationItem
+							text={navLink.text}
+							href={navLink.href}
+							currentPage={navLink.currentPage}
+						/>
+					))}
+				</ol>
+				<p className="banner__text">
+					DELTA I BOKBITSCUPEN FÖR ATT VINNA PENGAR NU!
+				</p>
 			</div>
 		</div>
 	);

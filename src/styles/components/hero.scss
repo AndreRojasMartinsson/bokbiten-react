@@ -1,0 +1,106 @@
+@import "../variables";
+@import "../mixins";
+
+.hero__container {
+	padding: 18px 150px;
+	width: 100%;
+
+	@include respondTo(955px) {
+		padding: 18px 40px;
+	}
+
+	.hero {
+		margin-top: 20px;
+		border-radius: 24px;
+		overflow: clip;
+		display: flex;
+		padding: 0 30px;
+		gap: 12px;
+		background: $bg-hero;
+		position: relative;
+
+		.hero__image {
+			position: relative;
+			bottom: -15px;
+
+			@include respondTo(1435px) {
+				opacity: 15%;
+				bottom: -100px;
+				position: absolute;
+			}
+
+			@include respondTo(580px) {
+				scale: 0.6;
+				left: -60px;
+			}
+		}
+
+		.hero__content {
+			padding: 50px 40px;
+			display: flex;
+			flex-direction: column;
+
+			h3 {
+				text-transform: uppercase;
+				color: $hero-fg;
+				font-size: 42px;
+				letter-spacing: 2px;
+				@include font("header");
+
+				@include respondTo(1435px) {
+					font-size: 28px;
+				}
+
+				@include respondTo(580px) {
+					font-size: 20px;
+				}
+			}
+
+			h2 {
+				color: $gold;
+				font-size: 82px;
+				letter-spacing: 10px;
+
+				.hero__break {
+					display: none;
+
+					@include respondTo(410px) {
+						display: block;
+					}
+				}
+
+				@include font("brand");
+
+				@include respondTo(1435px) {
+					font-size: 58px;
+				}
+
+				@include respondTo(580px) {
+					font-size: 34px;
+				}
+			}
+
+			.hero__buttons {
+				display: flex;
+				margin-top: 18px;
+				gap: 28px;
+
+				.button {
+					z-index: 2;
+					font-size: 16px;
+					letter-spacing: 1px;
+					padding: 0.8rem 3.2rem;
+				}
+
+				@include respondTo(580px) {
+					flex-direction: column;
+					gap: 12px;
+				}
+			}
+
+			@include respondTo(580px) {
+				padding: 50px 10px;
+			}
+		}
+	}
+}

@@ -1,10 +1,12 @@
-import Header from '@components/header';
-import { ThemeProvider } from '@components/theme';
+import Header from "@components/header";
+import Hero from "@components/hero";
+import { ThemeProvider } from "@components/theme";
 
 function Main() {
 	return (
 		<>
 			<Header />
+			<Hero />
 		</>
 	);
 }
