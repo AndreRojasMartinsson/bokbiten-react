@@ -4,8 +4,8 @@
   transition: all 200ms ease-in-out;
   font-size: 12px;
   padding: 1.2rem 2.8rem;
-  margin: 15px;
   border-radius: 8px;
+  width: fit-content;
 }
 
 .button--primary {
@@ -16,10 +16,10 @@
   filter: brightness(1.03);
 }
 .button--primary:active {
-  filter: brightness(1.05);
+  filter: brightness(0.95);
 }
 .button--primary:focus {
-  box-shadow: white 0px 0px 0px 2px, #d4942648 0px 0px 0px 4px;
+  box-shadow: var(--bg) 0px 0px 0px 2px, rgba(212, 148, 38, 0.2823529412) 0px 0px 0px 4px;
 }
 
 .button--square {

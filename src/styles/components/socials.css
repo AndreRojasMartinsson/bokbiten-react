@@ -1,0 +1,11 @@
+.socials {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-wrap: nowrap;
+  list-style: none;
+  gap: 8px;
+}
+
+/*# sourceMappingURL=socials.css.map */

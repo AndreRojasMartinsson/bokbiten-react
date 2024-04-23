@@ -1,3 +1,5 @@
+@import "variables";
+
 @mixin respondTo($media, $type: "max") {
 	@media (#{$type}-width: $media) {
 		@content;
@@ -17,5 +19,17 @@
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%, -50%);
+	}
+}
+
+@mixin font($font: "body") {
+	line-height: 1.2;
+
+	@if $font == "body" {
+		font-family: $font-body;
+	} @else if $font == "header" {
+		font-family: $font-header;
+	} @else if $font == "brand" {
+		font-family: $font-brand;
 	}
 }
