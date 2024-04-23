@@ -1,8 +1,6 @@
 import Button from '@components/button';
-import { useTheme } from '@lib/theme';
+import { useTheme, getPreferredTheme, ThemeContext } from '@lib/theme';
 import { MoonStar } from 'lucide-react';
-
-import { getPreferredTheme, ThemeContext } from '@lib/theme';
 import { PropsWithChildren, useEffect, useRef, useState } from 'react';
 
 export function ThemeProvider({ children }: PropsWithChildren) {

@@ -4,28 +4,25 @@ module.exports = {
 	extends: [
 		'eslint:recommended',
 		'plugin:@typescript-eslint/recommended',
-		'plugin:@typescript-eslint/stylistic',
+		'plugin:@typescript-eslint/stylistic-type-checked',
 		'plugin:github/typescript',
 		'plugin:sonarjs/recommended',
 		'plugin:react-hooks/recommended',
 		'plugin:jsx-a11y/recommended',
 		'google',
-		'react-app',
 		'problems',
 		'eslint-config-clean-typescript',
 		'prettier',
 	],
-	ignorePatterns: ['dist', '.eslintrc.cjs'],
+	ignorePatterns: ['dist', '.eslintrc.cjs', 'vite.config.ts', '**.d.ts'],
 	parser: '@typescript-eslint/parser',
-	plugins: ['react-refresh', 'github', 'sonarjs', 'unicorn', 'jsx-a11y', 'notice'],
+	parserOptions: {
+		project: './tsconfig.json',
+	},
+	plugins: ['react-refresh', '@typescript-eslint', 'github', 'sonarjs', 'unicorn', 'jsx-a11y'],
 	rules: {
+		'require-jsdoc': 'off',
 		'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
-		'notice/notice': [
-			'error',
-			{
-				mustMatch: 'Copyright \\(c\\) [0-9]{0,4}, Nick Deis',
-				template: '/** Copyright (c) <%= YEAR %>, Nick Deis **/',
-			},
-		],
+		'no-restricted-syntax': 'off',
 	},
 };
