@@ -1,22 +1,5 @@
 @use "../mixins";
-
-@function css-darken($color) {
-	// @return hsla(var(--#{$color}), 20%);
-
-	@return #{darken($color, 30%)};
-}
-
-@function toValues($colour) {
-	@return red($colour) + ", " + green($colour) + ", " + blue($colour);
-}
-
-@function toRGB($colour) {
-	@return rgb(red($colour), green($colour), blue($colour));
-}
-
-@function toRGBA($colour, $alpha: 1) {
-	@return rgba(toRGB($colour), $alpha);
-}
+@import "../variables";
 
 .button {
 	outline: none;
@@ -25,8 +8,8 @@
 
 	font-size: 12px;
 	padding: 1.2rem 2.8rem;
-	margin: 15px;
 	border-radius: 8px;
+	width: fit-content;
 }
 
 .button--primary {
@@ -38,13 +21,11 @@
 	}
 
 	&:active {
-		filter: brightness(1.05);
+		filter: brightness(0.95);
 	}
 
 	&:focus {
-		box-shadow:
-			white 0px 0px 0px 2px,
-			#d4942648 0px 0px 0px 4px;
+		box-shadow: $bg 0px 0px 0px 2px, #d4942648 0px 0px 0px 4px;
 	}
 }
 

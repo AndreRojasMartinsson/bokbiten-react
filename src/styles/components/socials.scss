@@ -1,0 +1,12 @@
+@import "../mixins";
+
+.socials {
+	// Could get away with using Grid, but this is simpler
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	flex-grow: 1;
+	flex-wrap: nowrap;
+	list-style: none;
+	gap: 8px;
+}

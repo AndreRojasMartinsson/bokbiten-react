@@ -1,12 +1,28 @@
+@import "mixins";
+
 @import "reset";
 @import "variables";
 
+* {
+	line-height: 1.2; // Standard line height
+
+	// Removing default margin & padding to make layout more predictable.
+	margin: 0;
+	padding: 0;
+
+	// Make all text the default body font-family unless otherwise stated somewhere else.
+	@include font();
+}
+
 :root {
+	@include font();
+
 	--bg: #{$bg_light};
 	--bg-header: #{$bg-header_light};
 	--bg-hero: #{$bg-hero_light};
 
 	--border: #{$border_light};
+	--border-muted: #{$border-muted_light};
 
 	--fg: #{$fg_light};
 	--primary: #{$primary_light};
@@ -26,6 +42,7 @@
 	--bg-hero: #{$bg-hero_dark};
 
 	--border: #{$border_dark};
+	--border-muted: #{$border-muted_dark};
 
 	--fg: #{$fg_dark};
 	--primary: #{$primary_dark};
