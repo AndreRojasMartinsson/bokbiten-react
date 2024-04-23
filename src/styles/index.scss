@@ -24,6 +24,8 @@
 	--border: #{$border_light};
 	--border-muted: #{$border-muted_light};
 
+	--hero-fg: #{$hero-fg_light};
+
 	--fg: #{$fg_light};
 	--primary: #{$primary_light};
 
@@ -33,6 +35,7 @@
 	--fg-button: #{$fg-button_light};
 
 	--button-primary: #{$button-primary_light};
+	--button-border: #{$button-border_light};
 	--button-fg: #{$button-fg_light};
 }
 
@@ -44,12 +47,15 @@
 	--border: #{$border_dark};
 	--border-muted: #{$border-muted_dark};
 
+	--hero-fg: #{$hero-fg_dark};
+
 	--fg: #{$fg_dark};
 	--primary: #{$primary_dark};
 
 	--gold: #{$gold_dark};
 
 	--primary-button: #{$primary-button_dark};
+	--button-border: #{$button-border_dark};
 	--fg-button: #{$fg-button_dark};
 
 	--button-primary: #{$button-primary_dark};

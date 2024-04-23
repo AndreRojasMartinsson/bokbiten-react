@@ -1,12 +1,19 @@
-import { Socials } from "@lib/socials";
-import { SocialItem } from "./social-item";
-import "@styles/components/socials.css";
+import Button from '@components/button';
+import { Socials } from '@config/socials';
 
 export default function SocialsList() {
 	return (
-		<ol className="socials">
-			{Socials.map((social) => (
-				<SocialItem icon={social.icon} />
+		<ol className='socials'>
+			{Socials.map(icon => (
+				<li>
+					<Button
+						intent='primary'
+						size='small'
+						shape='square'
+					>
+						{icon}
+					</Button>
+				</li>
 			))}
 		</ol>
 	);

@@ -1,16 +1,17 @@
-import { Menu } from "lucide-react";
-import ThemeSwitcher from "@components/theme-switcher";
 import Button from "@components/button";
-import Dropdown from "./dropdown";
-import SocialsList from "./socials-list";
+import Dropdown from "@components/header/dropdown";
+import { ThemeSwitcher } from "@components/theme";
+import { Menu } from "lucide-react";
 import { useState } from "react";
+import "@styles/components/socials.css";
+import Socials from "../socials";
 
-export default function HeaderBanner() {
+export default function Banner() {
 	const [show, setShow] = useState<boolean>(false);
 
 	return (
 		<div className="site__banner">
-			<SocialsList />
+			<Socials />
 			<h2 className="banner__text">
 				DELTA I BOKBITSCUPEN FÖR ATT VINNA PENGAR NU!
 			</h2>
@@ -20,7 +21,7 @@ export default function HeaderBanner() {
 					id="menu-button"
 					shape="square"
 					size="small"
-					onClick={(e) => setShow((prev) => !prev)}
+					onClick={() => setShow((prev) => !prev)}
 				>
 					<Menu size={18} />
 				</Button>
