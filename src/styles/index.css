@@ -64,7 +64,7 @@
   text-transform: none;
 }
 
-:where(button, [type=button], [type=reset], [type=submit]) {
+:where(button, [type="button"], [type="reset"], [type="submit"]) {
   -webkit-appearance: button;
   padding: 1px 6px;
 }
@@ -103,12 +103,12 @@
   vertical-align: top;
 }
 
-:where([type=search]) {
+:where([type="search"]) {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
 
-:where([type=color]) {
+:where([type="color"]) {
   background: inherit;
 }
 
@@ -284,7 +284,7 @@ html {
   filter: brightness(0.95);
 }
 .button--primary:focus {
-  box-shadow: var(--bg) 0px 0px 0px 2px, rgba(212, 148, 38, 0.2823529412) 0px 0px 0px 4px;
+  box-shadow: var(--bg) 0px 0px 0px 2px, #d4942648 0px 0px 0px 4px;
 }
 
 .button--square {
@@ -311,5 +311,3 @@ html {
 .button--square.button--large {
   padding: 1.2rem;
 }
-
-/*# sourceMappingURL=index.css.map */
