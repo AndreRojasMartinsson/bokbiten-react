@@ -1,5 +1,5 @@
 import Header from '@components/header';
-import ThemeProvider from '@components/theme-provider';
+import { ThemeProvider } from '@components/theme';
 
 function Main() {
 	return (
