@@ -1,10 +1,12 @@
-import Button from "@components/button";
+// import Button from "@components/button";
 import Dropdown from "@components/header/dropdown";
 import { ThemeSwitcher } from "@components/theme";
 import { Menu } from "lucide-react";
-import { useState } from "react";
+import { lazy, useState } from "react";
 import "@styles/components/socials.css";
 import Socials from "../socials";
+
+const Button = lazy(async () => import("@components/button"));
 
 export default function Banner() {
 	const [show, setShow] = useState<boolean>(false);

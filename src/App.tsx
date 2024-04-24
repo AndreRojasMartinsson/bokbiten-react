@@ -1,10 +1,18 @@
-import Button from "@components/button";
-import Carousel from "@components/carousel";
-import CookieConsent from "@components/cookie-consent";
-import Header from "@components/header";
-import Hero from "@components/hero";
-import SectionTitle from "@components/section-title";
+// import Button from "@components/button";
+// import Carousel from "@components/carousel";
+// import CookieConsent from "@components/cookie-consent";
+// import Header from "@components/header";
+// import Hero from "@components/hero";
+// import SectionTitle from "@components/section-title";
 import { ThemeProvider } from "@components/theme";
+import { lazy } from "react";
+
+const Header = lazy(async () => import("@components/header"));
+const Hero = lazy(async () => import("@components/hero"));
+const SectionTitle = lazy(async () => import("@components/section-title"));
+const CookieConsent = lazy(async () => import("@components/cookie-consent"));
+const Carousel = lazy(async () => import("@components/carousel"));
+const Button = lazy(async () => import("@components/button"));
 
 function Main() {
 	return (

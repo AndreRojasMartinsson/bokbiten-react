@@ -1,9 +1,12 @@
 import { ThemeSwitcher } from "@components/theme";
 import cn from "classnames";
-import NavigationItem from "@components/navigation-item";
+// import NavigationItem from "@components/navigation-item";
 import { NavLinks } from "@config/nav-links";
 import Socials from "@components/socials";
 import Divider from "@components/divider";
+import { lazy } from "react";
+
+const NavigationItem = lazy(async () => import("@components/navigation-item"));
 
 export default function Dropdown({ show = false }: { show?: boolean }) {
 	return (

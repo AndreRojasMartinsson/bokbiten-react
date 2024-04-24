@@ -1,18 +1,20 @@
-import Button from '@components/button';
-import { useTheme, getPreferredTheme, ThemeContext } from '@lib/theme';
-import { MoonStar } from 'lucide-react';
-import { PropsWithChildren, useEffect, useRef, useState } from 'react';
+// import Button from '@components/button';
+import { useTheme, getPreferredTheme, ThemeContext } from "@lib/theme";
+import { MoonStar } from "lucide-react";
+import { lazy, PropsWithChildren, useEffect, useRef, useState } from "react";
+
+const Button = lazy(async () => import("@components/button"));
 
 export function ThemeProvider({ children }: PropsWithChildren) {
 	const mountRun = useRef<boolean>(false);
 	const [theme, setTheme] = useState<string | null>(() => {
-		if (typeof window !== 'object') return null;
+		if (typeof window !== "object") return null;
 
-		const currentTheme = localStorage.getItem('theme');
+		const currentTheme = localStorage.getItem("theme");
 		if (currentTheme) return currentTheme;
 
 		const preferredTheme = getPreferredTheme();
-		localStorage.setItem('theme', preferredTheme);
+		localStorage.setItem("theme", preferredTheme);
 
 		return getPreferredTheme();
 	});
@@ -20,12 +22,12 @@ export function ThemeProvider({ children }: PropsWithChildren) {
 	useEffect(() => {
 		if (theme === null) return;
 
-		localStorage.setItem('theme', theme);
+		localStorage.setItem("theme", theme);
 
-		if (theme === 'dark') {
-			document.documentElement.classList.add('dark');
+		if (theme === "dark") {
+			document.documentElement.classList.add("dark");
 		} else {
-			document.documentElement.classList.remove('dark');
+			document.documentElement.classList.remove("dark");
 		}
 	}, [theme]);
 
@@ -37,7 +39,7 @@ export function ThemeProvider({ children }: PropsWithChildren) {
 
 		if (theme) return;
 
-		const currentTheme = localStorage.getItem('theme');
+		const currentTheme = localStorage.getItem("theme");
 		if (currentTheme) return setTheme(currentTheme);
 
 		const preferredTheme = getPreferredTheme();
@@ -47,11 +49,15 @@ export function ThemeProvider({ children }: PropsWithChildren) {
 	useEffect(() => {
 		const handleChange = (e: StorageEvent) => setTheme(e.newValue);
 
-		window.addEventListener('storage', handleChange);
-		return () => window.removeEventListener('storage', handleChange);
+		window.addEventListener("storage", handleChange);
+		return () => window.removeEventListener("storage", handleChange);
 	}, [setTheme]);
 
-	return <ThemeContext.Provider value={[theme, setTheme]}>{children}</ThemeContext.Provider>;
+	return (
+		<ThemeContext.Provider value={[theme, setTheme]}>
+			{children}
+		</ThemeContext.Provider>
+	);
 }
 
 export function ThemeSwitcher() {
@@ -59,11 +65,13 @@ export function ThemeSwitcher() {
 
 	return (
 		<Button
-			id='theme-switcher'
-			intent='primary'
-			size='small'
-			shape='square'
-			onClick={() => setTheme(theme => (theme === 'light' ? 'dark' : 'light'))}
+			id="theme-switcher"
+			intent="primary"
+			size="small"
+			shape="square"
+			onClick={() =>
+				setTheme((theme) => (theme === "light" ? "dark" : "light"))
+			}
 		>
 			<MoonStar size={18} />
 		</Button>

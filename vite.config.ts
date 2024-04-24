@@ -5,7 +5,21 @@ import tsconfigPaths from "vite-tsconfig-paths";
 // https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [tsconfigPaths(), react()],
-
+	build: {
+		rollupOptions: {
+			output: {
+				manualChunks: {
+					["@react-three/fiber"]: ["@react-three/fiber"],
+					["@react-three/drei"]: ["@react-three/drei"],
+					three: ["three"],
+					["lucide-react"]: ["lucide-react"],
+					react: ["react"],
+					["react-dom"]: ["react-dom"],
+				},
+			},
+		},
+		chunkSizeWarningLimit: 700,
+	},
 	server: {
 		warmup: {
 			clientFiles: [

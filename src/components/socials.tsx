@@ -1,5 +1,8 @@
 import { Socials as SocialsConfig } from "@config/socials";
-import Button from "./button";
+import { lazy } from "react";
+// import Button from "./button";
+
+const Button = lazy(async () => import("@components/button"));
 
 export default function Socials() {
 	return (

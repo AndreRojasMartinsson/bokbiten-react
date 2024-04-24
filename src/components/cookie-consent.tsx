@@ -1,5 +1,7 @@
-import { useCallback, useState } from "react";
-import Button from "./button";
+import { lazy, useCallback, useState } from "react";
+// import Button from "./button";
+
+const Button = lazy(async () => import("@components/button"));
 
 export default function CookieConsent() {
 	const [show, setShow] = useState<boolean>(() => {
