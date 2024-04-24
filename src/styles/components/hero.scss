@@ -3,10 +3,9 @@
 
 .hero__container {
 	padding: 18px 150px;
-	width: 100%;
 
-	@include respondTo(955px) {
-		padding: 18px 40px;
+	@include respondTo(1300px) {
+		padding: 18px 50px;
 	}
 
 	.hero {
@@ -14,19 +13,21 @@
 		border-radius: 24px;
 		overflow: clip;
 		display: flex;
-		padding: 0 30px;
-		gap: 12px;
+		padding: 50px 30px;
+		gap: 16px;
 		background: $bg-hero;
 		position: relative;
+		overflow: visible;
 
 		.hero__image {
 			position: relative;
 			bottom: -15px;
+			z-index: 0;
 
 			@include respondTo(1435px) {
-				opacity: 15%;
 				bottom: -100px;
 				position: absolute;
+				opacity: 15%;
 			}
 
 			@include respondTo(580px) {
@@ -35,7 +36,35 @@
 			}
 		}
 
+		.article__book {
+			position: relative;
+			z-index: 0;
+			left: -100px;
+			overflow: visible;
+			width: 500px;
+			top: 0;
+			opacity: 15%;
+			bottom: 0;
+
+			@include respondTo(1300px) {
+				width: 300px;
+				left: 0px;
+			}
+		}
+
 		.hero__content {
+			z-index: 1;
+			position: relative;
+			left: -200px;
+
+			@include respondTo(1300px) {
+				left: -250px;
+			}
+
+			@include respondTo(840px) {
+				left: -350px;
+			}
+
 			padding: 50px 40px;
 			display: flex;
 			flex-direction: column;
@@ -47,11 +76,11 @@
 				letter-spacing: 2px;
 				@include font("header");
 
-				@include respondTo(1435px) {
+				@include respondTo(1300px) {
 					font-size: 28px;
 				}
 
-				@include respondTo(580px) {
+				@include respondTo(595px) {
 					font-size: 20px;
 				}
 			}
@@ -60,6 +89,7 @@
 				color: $gold;
 				font-size: 82px;
 				letter-spacing: 10px;
+				margin-bottom: 25px;
 
 				.hero__break {
 					display: none;
@@ -71,11 +101,11 @@
 
 				@include font("brand");
 
-				@include respondTo(1435px) {
+				@include respondTo(1300px) {
 					font-size: 58px;
 				}
 
-				@include respondTo(580px) {
+				@include respondTo(595px) {
 					font-size: 34px;
 				}
 			}
@@ -83,7 +113,7 @@
 			.hero__buttons {
 				display: flex;
 				margin-top: 18px;
-				gap: 28px;
+				gap: 32px;
 
 				.button {
 					z-index: 2;
@@ -92,7 +122,7 @@
 					padding: 0.8rem 3.2rem;
 				}
 
-				@include respondTo(580px) {
+				@include respondTo(595px) {
 					flex-direction: column;
 					gap: 12px;
 				}
@@ -100,6 +130,7 @@
 
 			@include respondTo(580px) {
 				padding: 50px 10px;
+				left: -300px;
 			}
 		}
 	}

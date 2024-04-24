@@ -4,7 +4,7 @@ import Banner from "@components/header/banner";
 import Logo from "@components/header/logo";
 import "./styles.css";
 import { NavLinks } from "@config/nav-links";
-import NavigationItem from "@components/navigation/navigation-item";
+import NavigationItem from "@components/navigation-item";
 import Input from "@components/input";
 
 export default function Header() {
@@ -32,8 +32,9 @@ function Navigation() {
 	return (
 		<div className="header__nav">
 			<ol className="nav__bar">
-				{NavLinks.map((navLink) => (
+				{NavLinks.map((navLink, idx) => (
 					<NavigationItem
+						key={idx}
 						text={navLink.text}
 						href={navLink.href}
 						currentPage={navLink.currentPage}

@@ -2,7 +2,7 @@ import "@styles/components/input.css";
 
 export default function Input() {
 	return (
-		<div className="input__container">
+		<div className="input__container focus">
 			<input
 				type="text"
 				name="search-query"

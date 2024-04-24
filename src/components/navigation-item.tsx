@@ -16,7 +16,11 @@ export default function NavigationItem({
 	return (
 		<a
 			{...props}
-			className={cn(className, "nav__item", currentPage && "nav__item--active")}
+			className={cn(
+				className,
+				"nav__item focus",
+				currentPage && "nav__item--active"
+			)}
 		>
 			{text}
 		</a>
