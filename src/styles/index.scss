@@ -66,4 +66,12 @@ html {
 	background: var(--bg);
 }
 
+.focus {
+	&:focus {
+		box-shadow:
+			$bg 0px 0px 0px 2px,
+			#d4942648 0px 0px 0px 4px;
+	}
+}
+
 @import "components/button";
