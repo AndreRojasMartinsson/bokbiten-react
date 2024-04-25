@@ -43,8 +43,9 @@ function Main() {
 					<p className="article__subtitle">Uppdaterad Dagligen</p>
 
 					<div className="article__content">
-						{newBooks.map(({ author, image, title }) => (
+						{newBooks.map(({ author, image, title }, idx) => (
 							<div
+								key={idx}
 								className="section__article"
 								style={{ backgroundImage: `url(${image})` }}
 							>
