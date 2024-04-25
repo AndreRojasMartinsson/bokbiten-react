@@ -1,5 +1,4 @@
 import { lazy, useCallback, useState } from "react";
-// import Button from "./button";
 
 const Button = lazy(async () => import("@components/button"));
 
@@ -27,10 +26,18 @@ export default function CookieConsent() {
 				consent to our use of cookies.
 			</p>
 			<div className="cookie__buttons">
-				<Button onClick={() => handleClick()} intent="secondary">
+				<Button
+					onClick={() => handleClick()}
+					aria-label="Accept All Cookies"
+					intent="secondary"
+				>
 					Accept All
 				</Button>
-				<Button onClick={() => handleClick()} intent="primary">
+				<Button
+					onClick={() => handleClick()}
+					aria-label="Reject All Cookies"
+					intent="primary"
+				>
 					Reject All
 				</Button>
 			</div>

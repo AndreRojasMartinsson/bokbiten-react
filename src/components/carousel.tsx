@@ -1,4 +1,7 @@
 import covers from "@config/covers";
+import { lazy } from "react";
+
+const CarouselItem = lazy(async () => import("./carousel-item"));
 
 export default function Carousel() {
 	const duplicatedCovers = [...covers, ...covers];
@@ -7,16 +10,12 @@ export default function Carousel() {
 		<div className="arrivals__carousel">
 			<ul className="carousel__row">
 				{duplicatedCovers.map((cover, idx) => (
-					<li className="carousel__item" key={idx}>
-						<img src={cover} alt="cover" width={160} />
-					</li>
+					<CarouselItem key={idx} cover={cover} />
 				))}
 			</ul>
 			<ul className="carousel__row">
 				{duplicatedCovers.map((cover, idx) => (
-					<li className="carousel__item" key={idx}>
-						<img src={cover} alt="cover" width={160} />
-					</li>
+					<CarouselItem key={idx} cover={cover} />
 				))}
 			</ul>
 		</div>

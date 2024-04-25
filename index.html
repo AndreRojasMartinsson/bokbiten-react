@@ -3,82 +3,33 @@
 	<head>
 		<!-- Meta Taggar -->
 		<meta charset="UTF-8" />
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<meta content="ie=edge" http-equiv="X-UA-Compatible" />
 		<meta
-			content="width=device-width, initial-scale=1.0"
-			name="viewport"
-		/>
-		<meta
-			content="ie=edge"
-			http-equiv="X-UA-Compatible"
+			http-equiv="Content-Security-Policy"
+			content="default-src 'self'; base-uri 'self'; script-src 'nonce-development_nonce' 'unsafe-inline' *.vercel-scripts.com 'unsafe-eval' blob: 'strict-dynamic'; style-src 'self' 'unsafe-inline'; connect-src 'self' *.gstatic.com blob:; img-src 'self' data:;"
 		/>
 
 		<title>Bokbiten</title>
 
 		<!-- Open-Graph Meta Taggar  -->
-		<meta
-			content="Bokbiten"
-			property="og:title"
-		/>
-		<meta
-			content="website"
-			property="og:type"
-		/>
-		<meta
-			content="/Bokbiten_Logga_Png.png"
-			property="og:image"
-		/>
-		<meta
-			content="sv_SE"
-			property="og:locale"
-		/>
+		<meta content="Bokbiten" property="og:title" />
+		<meta content="website" property="og:type" />
+		<meta content="sv_SE" property="og:locale" />
 		<meta
 			content="Bokbiten; en fantastisk webbsida där du kan läsa e-böcker"
 			property="og:description"
 		/>
-		<meta
-			content="Bokbiten"
-			property="og:site_name"
-		/>
+		<meta content="Bokbiten" property="og:site_name" />
 		<meta
 			content="http://localhost:63342/Bokbiten/index.html"
 			property="og:url"
 		/>
 
-		<!-- Länkar -->
-
-		<!-- Fonts -->
-		<link
-			href="https://fonts.googleapis.com"
-			rel="preconnect"
-		/>
-		<link
-			crossorigin
-			href="https://fonts.gstatic.com"
-			rel="preconnect"
-		/>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Krona+One&family=Rubik:wght@300..900&display=swap&subset=latin"
-			rel="stylesheet"
-		/>
-
-
-		<link
-			href="/Bokbiten_Logga.svg"
-			as="image"
-			rel="preload"
-			type="image/svg+xml"
-		/>
-		<link
-			href="/Bokbiten_Logga_Png.png"
-			rel="icon"
-			type="image/png"
-		/>
+		<link href="/favicon.png" type="image/png" rel="icon" />
 	</head>
 	<body>
 		<div id="root"></div>
-		<script
-			type="module"
-			src="/src/main.tsx"
-		></script>
+		<script defer type="module" src="/src/main.tsx"></script>
 	</body>
 </html>
