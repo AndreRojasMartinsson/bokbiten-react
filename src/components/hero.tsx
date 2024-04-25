@@ -20,8 +20,12 @@ export default function Hero() {
 					</h2>
 
 					<div className="hero__buttons">
-						<Button intent="border">Delta</Button>
-						<Button intent="secondary">Läs Mer</Button>
+						<Button aria-label="Delta i Bokbitscupen" intent="border">
+							Delta
+						</Button>
+						<Button aria-label="Läs mer om Bokbitscupen" intent="secondary">
+							Läs Mer
+						</Button>
 					</div>
 				</div>
 			</div>

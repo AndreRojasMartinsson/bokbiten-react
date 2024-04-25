@@ -1,5 +1,5 @@
-import { ButtonProps, buttonVariants } from '@components/variants/button';
-import cn from 'classnames';
+import { ButtonProps, buttonVariants } from "@components/variants/button";
+import cn from "classnames";
 
 export default function Button({
 	intent,

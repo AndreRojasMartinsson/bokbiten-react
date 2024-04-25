@@ -1,12 +1,11 @@
-// import Button from "@components/button";
-import Dropdown from "@components/header/dropdown";
-import { ThemeSwitcher } from "@components/theme";
 import { Menu } from "lucide-react";
 import { lazy, useState } from "react";
 import "@styles/components/socials.css";
-import Socials from "../socials";
 
+const Socials = lazy(async () => import("@components/socials"));
 const Button = lazy(async () => import("@components/button"));
+const ThemeSwitcher = lazy(async () => import("@components/theme-switcher"));
+const Dropdown = lazy(async () => import("@components/header/dropdown"));
 
 export default function Banner() {
 	const [show, setShow] = useState<boolean>(false);
@@ -20,6 +19,7 @@ export default function Banner() {
 			<div className="banner__right">
 				<ThemeSwitcher />
 				<Button
+					aria-label={show ? "Stäng meny" : "Öppna meny"}
 					id="menu-button"
 					shape="square"
 					size="small"

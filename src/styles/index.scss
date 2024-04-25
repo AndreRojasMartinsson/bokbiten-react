@@ -244,6 +244,7 @@ html {
 			display: flex;
 			flex-direction: column;
 			overflow-x: hidden;
+			user-select: none;
 
 			gap: 1rem;
 			overflow: hidden;
@@ -264,6 +265,7 @@ html {
 				display: flex;
 				align-items: center;
 				gap: 1rem;
+				user-select: none;
 
 				animation: slide 250s linear infinite;
 
@@ -285,10 +287,12 @@ html {
 					text-align: center;
 					vertical-align: middle;
 					aspect-ratio: 1 / 1;
+					user-select: none;
 
 					img {
 						aspect-ratio: 1 / 1;
 						border-radius: 12px;
+						user-select: none;
 					}
 				}
 			}
