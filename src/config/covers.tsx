@@ -1,0 +1,18 @@
+export default [
+	'/covers/cover_1.webp',
+	'/covers/02b5c7ab19f760b5a56d5ceac623fab4.webp',
+	'/covers/393567ff6d170681d2c09c73404da518.webp',
+	'/covers/5de62d2a4fbf09c748287ddd75647187.webp',
+	'/covers/67b194b21c45670bd5fd67722096c95f.webp',
+	'/covers/81841fc7112f89f8f890d74eb0c7d555.webp',
+	'/covers/96fd6e94b97d78ee2dfb5c118445b4a1.webp',
+	'/covers/983e24d5c92528a72aa859cf049b6745.webp',
+	'/covers/b91b7cef3323893e91858090dcd37e70.webp',
+	'/covers/bdcc44155d62e1fa8def93946cd3b6c3.webp',
+	'/covers/cd0709d94cdf446603ea3068c831bc24.webp',
+	'/covers/d595ee17277588696817b0a9987fdce9.webp',
+	'/covers/dddd6c6da20a29ee4114664d0cbca147.webp',
+	'/covers/e61e74e68cf046212ce17ceb4d155bb2.webp',
+	'/covers/efe83d6b92ece55b257127b9d8c4a240.webp',
+	'/covers/f4153efe744a9bf6d1b5af575feb23d8.webp',
+];

@@ -1,7 +1,7 @@
 import { cva, VariantProps } from "cva";
 import { ButtonHTMLAttributes } from "react";
 
-export const buttonVariants = cva("button", {
+export const buttonVariants = cva("button focus", {
 	variants: {
 		intent: {
 			primary: "button--primary",

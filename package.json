@@ -3,6 +3,16 @@
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
+	"pnpm": {
+		"supportedArchitectures": {
+			"os": [
+				"win32"
+			],
+			"cpu": [
+				"x64"
+			]
+		}
+	},
 	"scripts": {
 		"dev": "vite",
 		"sass": "sass -w src:src --no-source-map",
@@ -11,11 +21,19 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
+		"@react-three/drei": "^9.105.4",
+		"@react-three/fiber": "^8.16.2",
+		"@types/three": "^0.163.0",
+		"@vercel/speed-insights": "^1.0.10",
 		"classnames": "^2.5.1",
 		"cva": "npm:class-variance-authority@^0.7.0",
 		"lucide-react": "^0.372.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
+		"sharp": "^0.33.3",
+		"svgo": "^3.2.0",
+		"three": "^0.163.0",
+		"vite-plugin-image-optimizer": "^1.1.7",
 		"vite-tsconfig-paths": "^4.3.2"
 	},
 	"devDependencies": {

@@ -1,12 +1,16 @@
-import Button from "./button";
-
 import "@styles/components/hero.css";
+import { lazy } from "react";
+
+const Button = lazy(async () => import("@components/button"));
+const HeroCanvas = lazy(async () => import("@components/hero-canvas"));
 
 export default function Hero() {
 	return (
 		<div className="hero__container">
 			<div className="hero">
-				<img className="hero__image" src="/Book.svg" alt="Orange Book" />
+				<div className="article__book">
+					<HeroCanvas />
+				</div>
 				<div className="hero__content">
 					<h3>NYHET</h3>
 					<h2>
@@ -14,6 +18,7 @@ export default function Hero() {
 						<br className="hero__break" />
 						CUPEN
 					</h2>
+
 					<div className="hero__buttons">
 						<Button intent="border">Delta</Button>
 						<Button intent="secondary">Läs Mer</Button>

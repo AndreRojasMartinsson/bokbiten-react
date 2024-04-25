@@ -1,10 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App.tsx';
-import '@styles/index.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.tsx";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+import "@styles/index.css";
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
 	<React.StrictMode>
+		<SpeedInsights />
 		<App />
-	</React.StrictMode>,
+	</React.StrictMode>
 );

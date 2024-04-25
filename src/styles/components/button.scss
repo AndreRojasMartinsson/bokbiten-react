@@ -6,17 +6,14 @@
 	border: none;
 	transition: all 200ms ease-in-out;
 
-	font-size: 12px;
-	padding: 1.2rem 2.8rem;
+	font-size: 13px;
+	padding: 1rem 3.5rem;
 	border-radius: 8px;
 	width: fit-content;
-}
-
-.button--primary {
-	background: var(--primary-button);
-	color: var(--fg-button);
+	height: min-content;
 
 	&:hover {
+		cursor: pointer;
 		filter: brightness(1.03);
 	}
 
@@ -24,11 +21,16 @@
 		filter: brightness(0.95);
 	}
 
-	&:focus {
-		box-shadow:
-			$bg 0px 0px 0px 2px,
-			#d4942648 0px 0px 0px 4px;
-	}
+	// &:focus {
+	// box-shadow:
+	// 	$bg 0px 0px 0px 2px,
+	// 	#d4942648 0px 0px 0px 4px;
+	// }
+}
+
+.button--primary {
+	background: var(--primary-button);
+	color: var(--fg-button);
 }
 
 .button--border {
