@@ -10,11 +10,11 @@ const Socials = lazy(async () => import("@components/socials"));
 export default function Dropdown({ show = false }: { show?: boolean }) {
 	return (
 		<div className={cn("header__dropdown", show && "header__dropdown--show")}>
-			<ol className="top__list">
+			<div className="top__list">
 				<Socials />
 				<Divider layout="vertical" placement="center" />
 				<ThemeSwitcher />
-			</ol>
+			</div>
 			<div className="dropdown__content">
 				<ol className="nav__bar">
 					{NavLinks.map((navLink, idx) => (

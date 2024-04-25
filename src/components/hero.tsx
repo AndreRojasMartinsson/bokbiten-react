@@ -12,12 +12,12 @@ export default function Hero() {
 					<HeroCanvas />
 				</div>
 				<div className="hero__content">
-					<h3>NYHET</h3>
-					<h2>
+					<h2>NYHET</h2>
+					<h3>
 						BOKBITS
 						<br className="hero__break" />
 						CUPEN
-					</h2>
+					</h3>
 
 					<div className="hero__buttons">
 						<Button aria-label="Delta i Bokbitscupen" intent="border">

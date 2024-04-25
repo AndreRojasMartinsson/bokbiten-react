@@ -49,7 +49,7 @@
 			justify-content: flex-end;
 			gap: 8px;
 
-			#theme-switcher {
+			.theme-switcher {
 				justify-self: flex-end;
 				align-self: flex-end;
 
@@ -118,6 +118,7 @@
 
 				.nav__bar {
 					width: 100%;
+					list-style: none;
 					display: flex;
 					flex-direction: column;
 					align-items: flex-start;
@@ -125,6 +126,7 @@
 
 					.nav__item {
 						margin-top: 2px;
+
 						color: $fg;
 						border-bottom: 2px solid transparent;
 						width: 100%;
@@ -257,6 +259,7 @@
 		.nav__bar {
 			width: 100%;
 			display: flex;
+			list-style: none;
 			justify-content: center;
 			gap: 24px;
 		}

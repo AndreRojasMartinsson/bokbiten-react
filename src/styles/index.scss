@@ -85,6 +85,14 @@ html {
 
 .site__main {
 	padding: 80px 150px;
+
+	@include respondTo(1000px) {
+		padding: 80px 80px;
+	}
+
+	@include respondTo(550px) {
+		padding: 80px 20px;
+	}
 	width: 100%;
 
 	.site__article {
@@ -105,6 +113,10 @@ html {
 				font-weight: 700;
 				display: inline-block;
 				transition: transform 0.2s;
+
+				@include respondTo(520px) {
+					font-size: 45px;
+				}
 
 				&:nth-of-type(1) {
 					animation: pressDown1 2s infinite;
@@ -301,11 +313,12 @@ html {
 		.article__content {
 			display: grid;
 			margin-top: 100px;
+
 			gap: 20px;
 
 			grid-template-columns: repeat(2, 1fr);
 
-			@include respondTo(1575px) {
+			@include respondTo(1000px) {
 				grid-template-columns: repeat(1, 1fr);
 			}
 
@@ -313,42 +326,46 @@ html {
 			width: 100%;
 
 			.section__article {
-				padding: 20px;
-
+				border: 2px solid $border-muted;
+				min-height: 320px;
+				border-radius: 16px;
 				display: flex;
-				flex-direction: row;
-				gap: 50px;
-
-				@include respondTo(930px) {
-					flex-direction: column;
-					gap: 15px;
-				}
-
+				flex-direction: column;
+				gap: 15px;
 				overflow: clip;
+				position: relative;
 
-				@include respondTo(930px) {
-					position: relative;
+				background-size: cover;
+				background-position: center;
+
+				.image__blur {
+					position: absolute;
+					inset: 0;
+					border-radius: 16px;
+					background: linear-gradient(
+						to left,
+						rgba(17, 12, 6, 0.74) 20%,
+						rgba(17, 12, 6, 0.342) 50%,
+						transparent 100%
+					);
 				}
 
 				.section__block {
 					padding: 25px 0 0 0;
 					min-width: 250px;
 
-					@include respondTo(930px) {
-						position: absolute;
-						bottom: 40px;
-						left: 40px;
-					}
+					position: absolute;
+					bottom: 40px;
+					right: 40px;
 
 					display: grid;
 					gap: 10px;
 
 					button {
+						font-size: 16px;
+						background: #f7921f65;
+						color: #ffff;
 						place-self: flex-end;
-
-						@include respondTo(930px) {
-							place-self: flex-start;
-						}
 					}
 				}
 
@@ -358,33 +375,77 @@ html {
 
 				.article__image {
 					border-radius: 12px;
+					max-width: 100%;
 
 					flex: auto;
 				}
 
 				.article__figure {
-					color: $fg;
+					color: $bg;
 
-					@include respondTo(930px) {
-						color: $bg;
+					display: block;
+
+					font-size: 36px;
+					font-weight: 450;
+					letter-spacing: 2px;
+					text-transform: uppercase;
+					text-align: right;
+
+					@include font();
+				}
+
+				.article__author {
+					color: $bg;
+					font-size: 14px;
+					font-style: italic;
+					text-transform: uppercase;
+					font-weight: 500;
+					letter-spacing: 2px;
+					text-align: right;
+
+					@include font();
+				}
+			}
+
+			.section__article:nth-of-type(odd) {
+				.image__blur {
+					background: linear-gradient(
+						to right,
+						rgba(17, 12, 6, 0.74) 20%,
+						rgba(17, 12, 6, 0.342) 50%,
+						transparent 100%
+					);
+				}
+
+				.section__block {
+					padding: 25px 0 0 0;
+
+					position: absolute;
+					bottom: 40px;
+					left: 40px;
+
+					display: grid;
+					gap: 10px;
+
+					button {
+						place-self: flex-start;
 					}
+				}
+
+				.article__figure {
+					color: $bg;
 
 					font-size: 36px;
 					font-weight: 450;
 					letter-spacing: 2px;
 					text-transform: uppercase;
 					text-align: left;
-
+					display: block;
 					@include font();
 				}
 
 				.article__author {
-					color: $fg;
-
-					@include respondTo(930px) {
-						color: $bg;
-					}
-
+					color: $bg;
 					font-size: 14px;
 					font-style: italic;
 					text-transform: uppercase;
@@ -393,37 +454,6 @@ html {
 					text-align: left;
 
 					@include font();
-				}
-			}
-
-			.section__article:nth-of-type(odd) {
-				.article__figure {
-					text-align: right;
-
-					@include respondTo(930px) {
-						text-align: left;
-						color: $fg;
-					}
-				}
-
-				.article__author {
-					text-align: right;
-
-					@include respondTo(930px) {
-						text-align: left;
-						color: $fg;
-					}
-				}
-
-				.article__button {
-					justify-self: flex-end;
-					align-self: flex-end;
-
-					@include respondTo(930px) {
-						background: $fg;
-						color: $bg;
-						place-self: flex-start;
-					}
 				}
 			}
 		}
@@ -456,6 +486,13 @@ html {
 		display: flex;
 		margin-top: 20px;
 		gap: 20px;
+	}
+}
+
+.dark {
+	.article__figure,
+	.article__author {
+		color: $fg !important;
 	}
 }
 
