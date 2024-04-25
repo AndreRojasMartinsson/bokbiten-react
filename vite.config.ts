@@ -6,21 +6,6 @@ import { ViteCspPlugin } from "vite-plugin-csp";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-	const viteClientRegex = /node_modules\/vite\/dist\/client\/client\.mjs$/gi;
-
-	const nonce = mode === "development" ? "nonce" : "{SERVER-GENERATED-NONCE}";
-
-	// regex'es to add CSP
-	// TODO: make one normal regex to handle all three
-	const regexScript = /<script(.*?)/gi;
-	const replacementScript = `<script nonce="${nonce}"$1`;
-
-	const regexStyle = /<style(.*?)/gi;
-	const replacementStyle = `<style nonce="${nonce}"$1`;
-
-	const regexLink = /<link(.*?)/gi;
-	const replacementLink = `<link nonce="${nonce}"$1`;
-
 	return {
 		plugins: [
 			tsconfigPaths(),
@@ -32,29 +17,6 @@ export default defineConfig(({ mode }) => {
 				jpg: { quality: 70 },
 				cache: false,
 			}),
-			// {
-			// 	name: "transform-file",
-			// 	transform(src, id) {
-			// 		if (viteClientRegex.test(id)) {
-			// 			return {
-			// 				code: src.replace(
-			// 					"style.setAttribute('data-vite-dev-id', id);",
-			// 					`style.setAttribute('data-vite-dev-id', id); style.setAttribute('nonce', '${nonce.toString()}');`
-			// 				),
-			// 			};
-			// 		}
-			// 	},
-			// },
-			// {
-			// 	name: "html-inject-nonce-into-script-tag",
-			// 	enforce: "post",
-			// 	transformIndexHtml(html) {
-			// 		return html
-			// 			.replace(regexScript, replacementScript)
-			// 			.replace(regexStyle, replacementStyle)
-			// 			.replace(regexLink, replacementLink);
-			// 	},
-			// },
 		],
 		esbuild: {
 			minifyIdentifiers: true,
@@ -98,9 +60,7 @@ export default defineConfig(({ mode }) => {
 			},
 			chunkSizeWarningLimit: 700,
 		},
-		html: {
-			cspNonce: "development_nonce",
-		},
+
 		server: {
 			warmup: {
 				clientFiles: [
