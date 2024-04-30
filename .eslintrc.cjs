@@ -22,6 +22,13 @@ module.exports = {
 	plugins: ['react-refresh', '@typescript-eslint', 'github', 'sonarjs', 'unicorn', 'jsx-a11y'],
 	rules: {
 		'require-jsdoc': 'off',
+		'valid-jsdoc': [
+			'warn',
+			{
+				requireReturnType: false,
+				requireParamType: false,
+			},
+		],
 		'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
 		'no-restricted-syntax': 'off',
 	},
