@@ -51,6 +51,6 @@
 		"eslint-plugin-unicorn": "^52.0.0",
 		"nodemon": "^3.1.0",
 		"typescript": "^5.4.5",
-		"vite": "^5.2.10"
+		"vite": "^5.4.17"
 	}
 }
